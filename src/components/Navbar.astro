@@ -1,0 +1,24 @@
+---
+import Drawer from '../components/Drawer.astro';
+---      
+      <nav class="text-white">
+        <div class="container mx-auto flex justify-between items-center">
+          <ul class="flex gap-2 text-black items-center">
+            <li>
+              <a href="/" class="font-bold text-white py-1 px-1 rounded-md">
+               <img src="../../img/logo.png" alt="" class="object-fill w-36" />
+              </a>
+            </li>
+            <li><a href="#home" class="ml-4 hidden md:block text-black">Home</a></li>
+            <li><a href="#features" class="ml-4 hidden md:block text-black">Features</a></li>
+            <li><a href="#pricing" class="ml-4 hidden md:block text-black">Pricing</a></li>
+            <li><a href="#reviews" class="ml-4 hidden md:block text-black">Reviews</a></li>
+            <li><a href="#partners" class="ml-4 hidden md:block text-black">Partners</a></li>
+          </ul>
+          <div class="nav-btns flex gap-3 text-black items-center">
+            <a href="app.kdsx.uz" class="rounded-lg md:px-0 lg:px-6 py-2 hidden md:block text-black">Log in</a>
+            <a href="app.kdsx.uz" class="rounded-lg px-6 py-2.5 bg-blue-600 text-white font-semibold hidden md:block">Sign up</a>
+              <Drawer/>
+          </div>
+        </div>
+      </nav>
