@@ -1,0 +1,528 @@
+---
+import BaseHead from '../../components/BaseHead.astro';
+import Footer from '../../components/Footer.astro';
+import { SITE_TITLE, SITE_DESCRIPTION } from '../../consts';
+import Navbar from '../../components/Navbar.astro'
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+		<script>
+(function (w, d, s, o: any, f, js, fjs) {
+        w[o] = w[o] || function () {
+            (w[o].q = w[o].q || []).push(arguments) };
+        js = d.createElement(s), fjs = d.getElementsByTagName(s)[0];
+        js.id = o; js.src = f; js.async = 1;
+        fjs.parentNode.insertBefore(js, fjs) }
+    (window, document, 'script', 'nw', 'https://chat.norby.io/widget'));
+        nw('init', {
+            apiKey: 'c3bb2931-e2c5-4393-819d-5eaef668b7ee',
+            serviceBaseUrl: 'https://api.norby.io',
+            lang: 'ru',
+            languageList: ['EN','RU'],
+            mainColor: '#2563eb',
+            popupBotAvatarColor: '#3E247E',
+            multichat: true,
+            botName: 'KDSX Bot',
+            imageTransferEnabled: true,
+            side: 'left',
+            marginSideDesktop: 80,
+            marginBottomDesktop: 48,
+            marginSideMobile: 16,
+            marginBottomMobile: 16
+        });
+		</script>
+	</head>
+<body class="font-sans antialiased">
+    <div class="custom-bg bg-cover">
+<Navbar/>
+      <section id="home" class="py-10 lg:py-20 flex justify-between px">
+        <div class="container mx-auto lg:flex justify-between items-center">
+          <div class="flex gap-4 flex-col xl:w-[60%]">
+            <h1 class="text-5xl md:text-5xl lg:text-7xl md:text-center lg:text-start">Make the smart choice for your business<span class="text-blue-500"> today!</span></h1>
+            <p class="w-auto md:w-96 tracking-wide font-light text-base my-2 md:my-6 md:text-center md:mx-auto lg:text-start lg:mx-0">Optimize your operations and increase your profitability with our comprehensive POS solution.</p>
+            <div class="flex gap-4 flex-col-reverse md:flex-row md:justify-center lg:justify-start">
+              <button class="border border-[#D0D5DD] rounded-lg px-11 py-4 font-semibold inline-flex gap-2 bg-blue-600 text-white justify-center md:justify-normal items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-circle-play">
+                  <circle cx="12" cy="12" r="10" />
+                  <polygon points="10 8 16 12 10 16 10 8" />
+                </svg>
+                Demo
+              </button>
+            </div>
+          </div>
+          <div class="flex justify-end relative mt-8 w-full">
+            <img src="../../img/pos_img.png" alt="placeholder" />
+          </div>
+        </div>
+      </section>
+    </div>
+    <section id="features" class="py-10 md:py-20 container mx-auto text-center flex flex-col gap-2 px">
+      <p class="text-blue-500 font-bold">Features</p>
+      <h1 class="text-4xl mb-2">Join the future of dining</h1>
+      <p class="tracking-wide font-light text-base">Embrace the future of restaurant management with KDSX POS, where technology meets exceptional service.</p>
+      <div class="container mx-auto grid md:grid-cols-3 grid-auto-rows text-center gap-10 mt-8">
+        <div class="flex flex-col items-center">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-workflow">
+            <rect width="8" height="8" x="3" y="3" rx="2" />
+            <path d="M7 11v4a2 2 0 0 0 2 2h4" />
+            <rect width="8" height="8" x="13" y="13" rx="2" />
+          </svg>
+          <p class="font-bold my-2">Streamline Your Operations</p>
+          <p class="tracking-wide font-light text-base">With KDSX POS, streamline your orders, payments, and inventory management for a smoother, more efficient workflow.</p>
+        </div>
+        <div class="flex flex-col items-center">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-square-user">
+            <rect width="18" height="18" x="3" y="3" rx="2" />
+            <circle cx="12" cy="10" r="3" />
+            <path d="M7 21v-2a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v2" />
+          </svg>
+          <p class="font-bold my-2">Enhance Customer Experience</p>
+          <p class="tracking-wide font-light text-base">Boost customer satisfaction with faster service, accurate orders, and multiple payment options using our advanced POS system.</p>
+        </div>
+        <div class="flex flex-col items-center">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-hourglass">
+            <path d="M5 22h14" />
+            <path d="M5 2h14" />
+            <path d="M17 22v-4.172a2 2 0 0 0-.586-1.414L12 12l-4.414 4.414A2 2 0 0 0 7 17.828V22" />
+            <path d="M7 2v4.172a2 2 0 0 0 .586 1.414L12 12l4.414-4.414A2 2 0 0 0 17 6.172V2" />
+          </svg>
+          <p class="font-bold my-2">Save Time and Reduce Errors</p>
+          <p class="tracking-wide font-light text-base">Automate your daily tasks, reduce manual errors, and save valuable time with KDSX POS, so you can focus on what you do best – serving great food.</p>
+        </div>
+        <div class="flex flex-col items-center">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-airplay">
+            <path d="M5 17H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2h-1" />
+            <path d="m12 15 5 6H7Z" />
+          </svg>
+          <p class="font-bold my-2">Real-Time Insights</p>
+          <p class="tracking-wide font-light text-base">Make informed decisions with real-time analytics and detailed reports on sales, inventory, and customer preferences.</p>
+        </div>
+        <div class="flex flex-col items-center">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-users">
+            <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
+            <circle cx="9" cy="7" r="4" />
+            <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
+            <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+          </svg>
+          <p class="font-bold my-2">Simplify Employee Management</p>
+          <p class="tracking-wide font-light text-base">Easily manage staff schedules, track attendance, and streamline payroll with our integrated employee management features.</p>
+        </div>
+        <div class="flex flex-col items-center mb-20">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-scaling">
+            <path d="M12 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7" />
+            <path d="M14 15H9v-5" />
+            <path d="M16 3h5v5" />
+            <path d="M21 3 9 15" />
+          </svg>
+          <p class="font-bold my-2">Scalable and Adaptable</p>
+          <p class="tracking-wide font-light text-base">Whether you’re a small café or a large restaurant, KDSX POS scales with your business, offering the flexibility and support you need.</p>
+        </div>
+      </div>
+      <hr class="w-full" />
+    </section>
+    <section id="pricing" class="px">
+      <div class="container mx-auto text-center">
+        <p class="text-blue-500 font-bold">Pricing</p>
+        <h1 class="text-4xl my-4">Plans that fit your scale</h1>
+        <p class="mb-10">Simple, transparent pricing that grows with you. Try any plan free for 14 days.</p>
+        <div class="mb-20">
+          <div class="flex flex-col lg:flex-row justify-center gap-x-6 gap-y-6 lg:gap-y-0 flex-wrap">
+            <div class="flex items-center justify-center gap-8">
+              <div class="w-full max-w-sm lg:w-96 border rounded-lg px-6 py-6 shadow-md">
+                <div class="flex justify-between">
+                  <span class="font-semibold">Monthly payment</span>
+                </div>
+                <div class="flex items-end gap-1 mt-2">
+                  <h1 class="text-6xl font-bold">$30</h1>
+                  <span class="flex justify-items-end text-gray-600">per month</span>
+                </div>
+                <p class="text-left my-4 text-gray-600">Server will be provided by the company.</p>
+                <div class="flex flex-col">
+                  <button class="bg-blue-600 text-white py-3 rounded-lg">Get started</button>
+                  <a class="border py-3 rounded-lg mt-3" href="https://t.me/kdsx_pos_admin">Chat to sales</a>
+                </div>
+                <div class="relative mt-8">
+                  <hr class="absolute left-0 right-0 -mx-5 w-auto" />
+                </div>
+                <div class="text-left py-6">
+                  <span class="font-semibold uppercase">Features</span>
+                  <p class="text-gray-600">Everything in <span class="font-semibold">Starter</span> plus....</p>
+                  <div class="flex gap-2 items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-circle-check text-blue-600">
+                      <circle cx="12" cy="12" r="10" />
+                      <path d="m9 12 2 2 4-4" />
+                    </svg>
+                    <span class="text-gray-600">Access to all features</span>
+                  </div>
+                  <div class="flex gap-2 items-center mt-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-circle-check text-blue-600">
+                      <circle cx="12" cy="12" r="10" />
+                      <path d="m9 12 2 2 4-4" />
+                    </svg>
+                    <span class="text-gray-600">9/5 support</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="flex items-center justify-center gap-8">
+              <div class="w-full max-w-sm lg:w-96 border rounded-lg px-6 py-6 shadow-md">
+                <div class="flex justify-between">
+                  <span class="font-semibold">Yearly payment</span>
+                </div>
+                <div class="flex items-end gap-1 mt-2">
+                  <h1 class="text-6xl font-bold">$325</h1>
+                  <span class="flex justify-items-end text-gray-600">per year</span>
+                </div>
+                <p class="text-left my-4 text-gray-600">Server will be provided by the company.</p>
+                <div class="flex flex-col">
+                  <button class="bg-blue-600 text-white py-3 rounded-lg">Get started</button>
+                  <a class="border py-3 rounded-lg mt-3" href="https://t.me/kdsx_pos_admin">Chat to sales</a>
+                </div>
+                <div class="relative mt-8">
+                  <hr class="absolute left-0 right-0 -mx-5 w-auto" />
+                </div>
+                <div class="text-left py-6">
+                  <span class="font-semibold uppercase">Features</span>
+                  <p class="text-gray-600">Everything in <span class="font-semibold">Monthly</span> plus....</p>
+                  <div class="flex mt-2 gap-2 items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-circle-check text-blue-600">
+                      <circle cx="12" cy="12" r="10" />
+                      <path d="m9 12 2 2 4-4" />
+                    </svg>
+                    <span class="text-gray-600">Save up to 45$ on this deal</span>
+                  </div>
+                  <div class="flex mt-2 gap-2 items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-circle-check text-blue-600">
+                      <circle cx="12" cy="12" r="10" />
+                      <path d="m9 12 2 2 4-4" />
+                    </svg>
+                    <span class="text-gray-600">Access to all features</span>
+                  </div>
+                  <div class="flex mt-2 gap-2 items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-circle-check text-blue-600">
+                      <circle cx="12" cy="12" r="10" />
+                      <path d="m9 12 2 2 4-4" />
+                    </svg>
+                    <span class="text-gray-600">24/7 support</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="flex items-center justify-center gap-8">
+              <div class="w-full max-w-sm lg:w-96 border rounded-lg px-6 py-6 shadow-md">
+                <div class="flex justify-between">
+                  <span class="font-semibold">Lifetime Purchase</span>
+                  <span class="border rounded-full px-2 bg-blue-100 text-blue-600 border-blue-400">Premium</span>
+                </div>
+                <div class="flex items-end gap-1 mt-2">
+                  <h1 class="text-6xl font-bold">$1899</h1>
+                  <span class="flex justify-items-end text-gray-600">lifetime access</span>
+                </div>
+                <p class="text-left my-4 text-gray-600">Customer needs to buy his or her server.</p>
+                <div class="flex flex-col">
+                  <button class="bg-blue-600 text-white py-3 rounded-lg">Get started</button>
+                  <a class="border py-3 rounded-lg mt-3" href="https://t.me/kdsx_pos_admin">Chat to sales</a>
+                </div>
+                <div class="relative mt-8">
+                  <hr class="absolute left-0 right-0 -mx-5 w-auto" />
+                </div>
+                <div class="text-left py-6">
+                  <span class="font-semibold uppercase">Features</span>
+                  <p class="text-gray-600">Lifetime <span class="font-semibold">Access</span> plus....</p>
+                  <div class="flex mt-2 gap-2 items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-circle-check text-blue-600">
+                      <circle cx="12" cy="12" r="10" />
+                      <path d="m9 12 2 2 4-4" />
+                    </svg>
+                    <span class="text-gray-600">Free mentorship from A to Z</span>
+                  </div>
+                  <div class="flex mt-2 gap-2 items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-circle-check text-blue-600">
+                      <circle cx="12" cy="12" r="10" />
+                      <path d="m9 12 2 2 4-4" />
+                    </svg>
+                    <span class="text-gray-600">1 Check printing machine bonus</span>
+                  </div>
+                  <div class="flex mt-2 gap-2 items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-circle-check text-blue-600">
+                      <circle cx="12" cy="12" r="10" />
+                      <path d="m9 12 2 2 4-4" />
+                    </svg>
+                    <span class="text-gray-600">Free new updates</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <hr />
+      </div>
+    </section>
+    <section id="reviews" class="pt-10 md:pt-20 px">
+      <div class="container mx-auto flex flex-col lg:flex-row justify-between items-start">
+        <div class="flex flex-col mb-8 lg:mb-0">
+          <h1 class="text-4xl font-semibold mb-4">Don’t just take our word for it</h1>
+          <p class="text-gray-600">Hear from some of our amazing customers who are automating their businesses.</p>
+        </div>
+      </div>
+      <div class="container mx-auto carousel mt-10" id="">
+        <div class="grid grid-flow-col carousel-slides">
+          <div class="carousel-slide w-80 h-[480px] relative">
+            <img src="../../img/customer_1.jpeg" alt="" class="h-[480px] object-fill" />
+            <div class="bg-white text-white bg-opacity-80 absolute bottom-0 left-0 right-0 z-20 m-6 p-4 glass-effect">
+              <div class="flex items-center">
+                <img src="../../img/star.png" alt="" />
+                <img src="../../img/star.png" alt="" />
+                <img src="../../img/star.png" alt="" />
+                <img src="../../img/star.png" alt="" />
+                <img src="../../img/star.png" alt="" />
+              </div>
+              <h1 class="text-2xl my-4 text-white">Qobiljon Ne'matillayev</h1>
+              <h6 class="text-lg font-semibold text-white">Asoschi, Takahashi mochi</h6>
+              <p>Toshkent</p>
+            </div>
+          </div>
+          <div class="carousel-slide w-80 h-[480px] relative">
+            <img src="../../img/customer_2.jpeg" alt="" class="h-[480px] object-fill" />
+            <div class="bg-white text-white bg-opacity-75 absolute bottom-0 left-0 right-0 z-20 m-6 p-4 glass-effect">
+              <!-- <h1 class="text-xl font-semibold mb-4">“We’ve really sped up our workflow using Untitled.”</h1> -->
+              <div class="flex">
+                <img src="../../img/star.png" alt="" />
+                <img src="../../img/star.png" alt="" />
+                <img src="../../img/star.png" alt="" />
+                <img src="../../img/star.png" alt="" />
+                <img src="../../img/star.png" alt="" />
+              </div>
+              <h1 class="text-2xl my-4 text-white">Sohibjon J</h1>
+              <h6 class="text-lg font-semibold text-white">Buxgalter, Steak House</h6>
+              <p>Namangan</p>
+            </div>
+          </div>
+          <div class="carousel-slide w-80 h-[480px] relative">
+            <img src="../../img/customer_3.jpeg" alt="" class="h-[480px] object-cover" />
+            <div class="bg-white text-white bg-opacity-75 absolute bottom-0 left-0 right-0 z-20 m-6 p-4 glass-effect">
+              <div class="flex">
+                <img src="../../img/star.png" alt="" />
+                <img src="../../img/star.png" alt="" />
+                <img src="../../img/star.png" alt="" />
+                <img src="../../img/star.png" alt="" />
+                <img src="../../img/star.png" alt="" />
+              </div>
+              <h1 class="text-2xl my-4 text-white">Davron Tadjibaev</h1>
+              <h6 class="text-lg font-semibold text-white">Direktor, Family</h6>
+              <p>Toshkent</p>
+            </div>
+          </div>
+          <div class="carousel-slide w-80 h-[480px] relative">
+            <img src="../../img/customer_4.jpeg" alt="" class="h-[480px] object-cover" />
+            <div class="bg-white text-white bg-opacity-75 absolute bottom-0 left-0 right-0 z-20 m-6 p-4 glass-effect">
+              <div class="flex">
+                <img src="../../img/star.png" alt="" />
+                <img src="../../img/star.png" alt="" />
+                <img src="../../img/star.png" alt="" />
+                <img src="../../img/star.png" alt="" />
+                <img src="../../img/star.png" alt="" />
+              </div>
+              <h1 class="text-2xl my-4 text-white">Bekzod Turgunov</h1>
+              <h6 class="text-lg font-semibold text-white">Direktor yordamchisi, Evrika</h6>
+              <p>Namangan</p>
+            </div>
+          </div>
+          <div class="carousel-slide w-80 h-[480px] relative">
+            <img src="https://www.jll.ca/images/jll-employees/internet-contacts/11432893.png" alt="" class="h-[480px] object-cover" />
+            <div class="bg-white text-white bg-opacity-75 absolute bottom-0 left-0 right-0 z-20 m-6 p-4 glass-effect">
+              <div class="flex">
+                <img src="../../img/star.png" alt="" />
+                <img src="../../img/star.png" alt="" />
+                <img src="../../img/star.png" alt="" />
+                <img src="../../img/star.png" alt="" />
+                <img src="../../img/star.png" alt="" />
+              </div>
+              <h1 class="text-2xl my-4 text-white">Mashxura K</h1>
+              <h6 class="text-lg font-semibold text-white">Asoschi, Ayshe Dessert</h6>
+              <p>Namangan</p>
+            </div>
+          </div>
+          <div class="carousel-slide w-80 h-[480px] relative">
+            <img src="https://img.freepik.com/free-photo/handsome-smiling-man-wearing-green-shirt-standing-against-blue-background_662251-587.jpg" alt="" class="h-[480px] object-cover" />
+            <div class="bg-white text-white bg-opacity-75 absolute bottom-0 left-0 right-0 z-20 m-6 p-4 glass-effect">
+              <div class="flex">
+                <img src="../../img/star.png" alt="" />
+                <img src="../../img/star.png" alt="" />
+                <img src="../../img/star.png" alt="" />
+                <img src="../../img/star.png" alt="" />
+                <img src="../../img/star.png" alt="" />
+              </div>
+              <h1 class="text-2xl my-4 text-white">Sardorbek F</h1>
+              <h6 class="text-lg font-semibold text-white">Boshqaruvchi, N1 Hotdog</h6>
+              <p>Namangan</p>
+            </div>
+          </div>
+              <div class="carousel-slide w-80 h-[480px] relative">
+            <img src="../../img/customer_1.jpeg" alt="" class="h-[480px] object-fill" />
+            <div class="bg-white text-white bg-opacity-80 absolute bottom-0 left-0 right-0 z-20 m-6 p-4 glass-effect">
+              <div class="flex items-center">
+                <img src="../../img/star.png" alt="" />
+                <img src="../../img/star.png" alt="" />
+                <img src="../../img/star.png" alt="" />
+                <img src="../../img/star.png" alt="" />
+                <img src="../../img/star.png" alt="" />
+              </div>
+              <h1 class="text-2xl my-4 text-white">Qobiljon Ne'matillayev</h1>
+              <h6 class="text-lg font-semibold text-white">Asoschi, Takahashi mochi</h6>
+              <p>Toshkent</p>
+            </div>
+          </div>
+          <div class="carousel-slide w-80 h-[480px] relative">
+            <img src="../../img/customer_2.jpeg" alt="" class="h-[480px] object-fill" />
+            <div class="bg-white text-white bg-opacity-75 absolute bottom-0 left-0 right-0 z-20 m-6 p-4 glass-effect">
+              <!-- <h1 class="text-xl font-semibold mb-4">“We’ve really sped up our workflow using Untitled.”</h1> -->
+              <div class="flex">
+                <img src="../../img/star.png" alt="" />
+                <img src="../../img/star.png" alt="" />
+                <img src="../../img/star.png" alt="" />
+                <img src="../../img/star.png" alt="" />
+                <img src="../../img/star.png" alt="" />
+              </div>
+              <h1 class="text-2xl my-4 text-white">Sohibjon J</h1>
+              <h6 class="text-lg font-semibold text-white">Buxgalter, Steak House</h6>
+              <p>Namangan</p>
+            </div>
+          </div>
+          <div class="carousel-slide w-80 h-[480px] relative">
+            <img src="../../img/customer_3.jpeg" alt="" class="h-[480px] object-cover" />
+            <div class="bg-white text-white bg-opacity-75 absolute bottom-0 left-0 right-0 z-20 m-6 p-4 glass-effect">
+              <div class="flex">
+                <img src="../../img/star.png" alt="" />
+                <img src="../../img/star.png" alt="" />
+                <img src="../../img/star.png" alt="" />
+                <img src="../../img/star.png" alt="" />
+                <img src="../../img/star.png" alt="" />
+              </div>
+              <h1 class="text-2xl my-4 text-white">Davron Tadjibaev</h1>
+              <h6 class="text-lg font-semibold text-white">Direktor, Family</h6>
+              <p>Toshkent</p>
+            </div>
+          </div>
+          <div class="carousel-slide w-80 h-[480px] relative">
+            <img src="../../img/customer_4.jpeg" alt="" class="h-[480px] object-cover" />
+            <div class="bg-white text-white bg-opacity-75 absolute bottom-0 left-0 right-0 z-20 m-6 p-4 glass-effect">
+              <div class="flex">
+                <img src="../../img/star.png" alt="" />
+                <img src="../../img/star.png" alt="" />
+                <img src="../../img/star.png" alt="" />
+                <img src="../../img/star.png" alt="" />
+                <img src="../../img/star.png" alt="" />
+              </div>
+              <h1 class="text-2xl my-4 text-white">Bekzod Turgunov</h1>
+              <h6 class="text-lg font-semibold text-white">Direktor yordamchisi, Evrika</h6>
+              <p>Namangan</p>
+            </div>
+          </div>
+          <div class="carousel-slide w-80 h-[480px] relative">
+            <img src="https://www.jll.ca/images/jll-employees/internet-contacts/11432893.png" alt="" class="h-[480px] object-cover" />
+            <div class="bg-white text-white bg-opacity-75 absolute bottom-0 left-0 right-0 z-20 m-6 p-4 glass-effect">
+              <div class="flex">
+                <img src="../../img/star.png" alt="" />
+                <img src="../../img/star.png" alt="" />
+                <img src="../../img/star.png" alt="" />
+                <img src="../../img/star.png" alt="" />
+                <img src="../../img/star.png" alt="" />
+              </div>
+              <h1 class="text-2xl my-4 text-white">Mashxura K</h1>
+              <h6 class="text-lg font-semibold text-white">Asoschi, Ayshe Dessert</h6>
+              <p>Namangan</p>
+            </div>
+          </div>
+          <div class="carousel-slide w-80 h-[480px] relative">
+            <img src="https://img.freepik.com/free-photo/handsome-smiling-man-wearing-green-shirt-standing-against-blue-background_662251-587.jpg" alt="" class="h-[480px] object-cover" />
+            <div class="bg-white text-white bg-opacity-75 absolute bottom-0 left-0 right-0 z-20 m-6 p-4 glass-effect">
+              <div class="flex">
+                <img src="../../img/star.png" alt="" />
+                <img src="../../img/star.png" alt="" />
+                <img src="../../img/star.png" alt="" />
+                <img src="../../img/star.png" alt="" />
+                <img src="../../img/star.png" alt="" />
+              </div>
+              <h1 class="text-2xl my-4 text-white">Sardorbek F</h1>
+              <h6 class="text-lg font-semibold text-white">Boshqaruvchi, N1 Hotdog</h6>
+              <p>Namangan</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- <div class="container mx-auto flex gap-8 mt-4">
+        <button class="border rounded-full p-4" id="prevBtn">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-left text-[#667085]"><path d="m15 18-6-6 6-6" /></svg>
+        </button>
+        <button class="border rounded-full p-4" id="nextBtn">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-right text-[#667085]"><path d="m9 18 6-6-6-6" /></svg>
+        </button>
+      </div> -->
+    </section>
+    <section id="partners" class="py-10 md:py-20">
+      <div class="container mx-auto bg-[#F9FAFB] p-6 rounded-xl">
+        <div class="max-w-[85rem] mx-auto">
+          <div class="w-2/3 sm:w-1/2 lg:w-1/3 mx-auto text-center mb-6">
+            <h2 class="text-gray-600 dark:text-neutral-400 text-lg">Trusted by 100+ restaurants and cafes</h2>
+          </div>
+          <div class="slider">
+            <div class="slide-track">
+              <img src="../../img/ayshe_dessert.svg" alt="Ayshe Dessert" class="svg-icon py-3 lg:py-5 w-16 h-auto md:w-20 lg:w-24 mx-auto text-gray-500 dark:text-neutral-500" />
+              <img src="../../img/evrika.svg" alt="Evrika" class="svg-icon py-3 lg:py-5 w-16 h-auto md:w-20 lg:w-24 mx-auto text-gray-500 dark:text-neutral-500" />
+              <img src="../../img/family.svg" alt="Family" class="svg-icon py-3 lg:py-5 w-16 h-auto md:w-20 lg:w-24 mx-auto text-gray-500 dark:text-neutral-500" />
+              <img src="../../img/hotdog.svg" alt="Hotdog" class="svg-icon py-3 lg:py-5 w-16 h-auto md:w-20 lg:w-24 mx-auto text-gray-500 dark:text-neutral-500" />
+              <img src="../../img/stake_house.svg" alt="Stake House" class="svg-icon py-3 lg:py-5 w-16 h-auto md:w-20 lg:w-24 mx-auto text-gray-500 dark:text-neutral-500" />
+              <img src="../../img/takashi.svg" alt="Takashi" class="svg-icon py-3 lg:py-5 w-16 h-auto md:w-20 lg:w-24 mx-auto text-gray-500 dark:text-neutral-500" />
+              <img src="../../img/ayshe_dessert.svg" alt="Ayshe Dessert" class="svg-icon py-3 lg:py-5 w-16 h-auto md:w-20 lg:w-24 mx-auto text-gray-500 dark:text-neutral-500" />
+              <img src="../../img/evrika.svg" alt="Evrika" class="svg-icon py-3 lg:py-5 w-16 h-auto md:w-20 lg:w-24 mx-auto text-gray-500 dark:text-neutral-500" />
+              <img src="../../img/family.svg" alt="Family" class="svg-icon py-3 lg:py-5 w-16 h-auto md:w-20 lg:w-24 mx-auto text-gray-500 dark:text-neutral-500" />
+              <img src="../../img/hotdog.svg" alt="Hotdog" class="svg-icon py-3 lg:py-5 w-16 h-auto md:w-20 lg:w-24 mx-auto text-gray-500 dark:text-neutral-500" />
+              <img src="../../img/stake_house.svg" alt="Stake House" class="svg-icon py-3 lg:py-5 w-16 h-auto md:w-20 lg:w-24 mx-auto text-gray-500 dark:text-neutral-500" />
+              <img src="../../img/takashi.svg" alt="Takashi" class="svg-icon py-3 lg:py-5 w-16 h-auto md:w-20 lg:w-24 mx-auto text-gray-500 dark:text-neutral-500" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="demo" class="py-10 md:py-20 px">
+      <div class="container mx-auto">
+        <div class="md:flex justify-between items-center relative">
+          <div class="">
+            <h1 class="text-4xl mb-10">Get started in 5 minutes</h1>
+            <div class="flex mt-2 gap-2 items-center">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-circle-check text-blue-600">
+                <circle cx="12" cy="12" r="10" />
+                <path d="m9 12 2 2 4-4" />
+              </svg>
+              <span class="text-gray-600">14-day free trial</span>
+            </div>
+            <div class="flex mt-2 gap-2 items-center">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-circle-check text-blue-600">
+                <circle cx="12" cy="12" r="10" />
+                <path d="m9 12 2 2 4-4" />
+              </svg>
+              <span class="text-gray-600">Peronalized training</span>
+            </div>
+            <div class="flex mt-2 gap-2 items-center">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-circle-check text-blue-600">
+                <circle cx="12" cy="12" r="10" />
+                <path d="m9 12 2 2 4-4" />
+              </svg>
+              <span class="text-gray-600">Access to all features</span>
+            </div>
+            <div class="flex gap-2 mt-10 w-full flex-col-reverse md:flex-row">
+              <button class="border px-6 py-3 rounded-lg">Learn more</button>
+              <button class="bg-blue-600 text-white px-6 py-3 rounded-lg">Get started</button>
+            </div>
+          </div>
+          <img src="../../img/dash_img.png" alt="" class="border-4 rounded-lg border-black w-full md:w-[60%] mt-8" />
+        </div>
+      </div>
+    </section>
+  <Footer/>
+  </body>
+</html>

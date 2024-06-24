@@ -31,7 +31,6 @@
 body {
   /* font-family: "Atkinson", sans-serif; */
   /* margin: 0; */
-  padding: 0;
   text-align: left;
   background-size: 100% 600px;
   word-wrap: break-word;
@@ -196,6 +195,24 @@ html {
 .text-blue {
   color: #3b82f6;
 }
+
+.sidebar {
+  transform: translateX(-100%);
+  flex: 0 0 200px;
+  flex-direction: column;
+  backdrop-filter: blur(30px) saturate(2);
+  -webkit-backdrop-filter: blur(30px) saturate(2);
+  padding-inline: 0;
+  padding-block: 13px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  transition: 0.2s cubic-bezier(0.36, -0.01, 0, 0.77);
+  height: 100%;
+}
+.sidebar.open {
+  transform: translateX(0);
+}
+
 @media (max-width: 640px) {
   .slide-track {
     width: calc(120px * 10);
@@ -214,6 +231,13 @@ html {
   .px {
     padding-left: 1rem;
     padding-right: 1rem;
+  }
+}
+
+@media (min-width: 1045px) {
+  .px {
+    padding-left: 0;
+    padding-right: 0;
   }
 }
 
