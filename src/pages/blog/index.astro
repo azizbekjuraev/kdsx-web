@@ -1,10 +1,10 @@
 ---
 import BaseHead from '../../components/BaseHead.astro';
-import Footer from '../../components/Footer.astro';
+import Footer from '../../components/en/Footer.astro';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../../consts';
 import { getCollection } from 'astro:content';
 import FormattedDate from '../../components/FormattedDate.astro';
-import Navbar from '../../components/Navbar.astro'
+import Navbar from '../../components/en/Navbar.astro'
 import BlogSections from '../../components/BlogSections.astro'
 
 const posts = (await getCollection('blog')).sort(
