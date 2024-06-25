@@ -3,55 +3,26 @@ import BaseHead from '../../components/BaseHead.astro';
 import Footer from '../../components/en/Footer.astro';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../../consts';
 import Navbar from '../../components/en/Navbar.astro';
+import Modal from '../../components/Modal.astro';
 ---
 
 <!doctype html>
 <html lang="en">
 	<head>
 		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
-		<script>
-(function (w, d, s, o: any, f, js, fjs) {
-        w[o] = w[o] || function () {
-            (w[o].q = w[o].q || []).push(arguments) };
-        js = d.createElement(s), fjs = d.getElementsByTagName(s)[0];
-        js.id = o; js.src = f; js.async = 1;
-        fjs.parentNode.insertBefore(js, fjs) }
-    (window, document, 'script', 'nw', 'https://chat.norby.io/widget'));
-        nw('init', {
-            apiKey: 'c3bb2931-e2c5-4393-819d-5eaef668b7ee',
-            serviceBaseUrl: 'https://api.norby.io',
-            lang: 'ru',
-            languageList: ['EN','RU'],
-            mainColor: '#2563eb',
-            popupBotAvatarColor: '#3E247E',
-            multichat: true,
-            botName: 'KDSX Bot',
-            imageTransferEnabled: true,
-            side: 'left',
-            marginSideDesktop: 80,
-            marginBottomDesktop: 48,
-            marginSideMobile: 16,
-            marginBottomMobile: 16
-        });
-
-        const openDemoBtn = document.getElementById("openDemoBtn");
-        const helloText = document.getElementById("hello");
-       openDemoBtn?.addEventListener('click', ()=>{
-        console.log('hello world')
-        helloText?.classList.toggle('hidden')
-       })
-		</script>
+    <script src="../../../public/js/index.js"></script>
 	</head>
 <body class="font-sans antialiased">
-    <div class="custom-bg bg-cover">
-<Navbar/>
+   <div id="overlay" class="hidden fixed inset-0 w-full h-full bg-black bg-opacity-50 z-10"></div>
+    <div class="custom-bg bg-cover relative">
+     <Navbar/>
       <section id="home" class="py-10 lg:py-20 flex justify-between px">
         <div class="container mx-auto lg:flex justify-between items-center">
           <div class="flex gap-4 flex-col xl:w-[60%]">
             <h1 class="text-5xl md:text-5xl lg:text-7xl md:text-center lg:text-start">Make the smart choice for your business<span class="text-blue-500"> today!</span></h1>
             <p class="w-auto md:w-96 tracking-wide font-light text-base my-2 md:my-6 md:text-center md:mx-auto lg:text-start lg:mx-0">Optimize your operations and increase your profitability with our comprehensive POS solution.</p>
             <div class="flex gap-4 flex-col-reverse md:flex-row md:justify-center lg:justify-start">
-              <button id="openDemoBtn" class="border border-[#D0D5DD] rounded-lg px-11 py-4 font-semibold inline-flex gap-2 bg-blue-600 text-white justify-center md:justify-normal items-center">
+              <button id="openModalBtn" class="border border-[#D0D5DD] rounded-lg px-11 py-4 font-semibold inline-flex gap-2 bg-blue-600 text-white justify-center md:justify-normal items-center">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-circle-play">
                   <circle cx="12" cy="12" r="10" />
                   <polygon points="10 8 16 12 10 16 10 8" />
@@ -65,26 +36,9 @@ import Navbar from '../../components/en/Navbar.astro';
           </div>
         </div>
       </section>
-    </div>
-    <!-- <h1 id="hello" class="hidden">Hello world</h1> -->
-    <!-- component -->
-<div id="hello" class="min-h-screen bg-gray-100 relative hidden">
-<div class="max-w-7xl mx-auto  md:px-10 px-6  py-20">
-                <div class="bg-white relative w-full p-6 rounded max-w-2xl mx-auto">
-          <iframe class="w-full aspect-video" width="560" height="315" src="https://www.youtube.com/embed/mkr4tAlVKlY?si=zpu1l0QEKfQCPBlr" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-              <img
-                src="https://media.licdn.com/dms/image/D4D0BAQEgOwhnLeymEQ/company-logo_200_200/0/1718372098183/kdsx_pos_logo?e=2147483647&v=beta&t=WSgZkjLp_RwUg0jLYV-6wx283g4FSs3Gww1u8ww2My8"
-                class="absolute bottom-24 right-9 h-10 w-10 scale-110"
-              ></img>
-              <h3 class="mt-6 text-lg font-bold text-gray-800"></h3>
-              <!-- <ul class="space-y-2 mt-4">
-                <li class="font-laonoto border-b pb-2 hover:text-blue-500 hover:underline cursor-pointer">1.ດາວໂຫຼດເອກະສານປະກອບບົດຮຽນ</li>
-                <li class="font-laonoto border-b pb-2 hover:text-blue-500 hover:underline cursor-pointer">2.ແຕກຟລາຍ ແລະ ຕິດຕັ້ງໂປຣແກຣມ</li>
-                <li class="font-laonoto border-b pb-2 hover:text-blue-500 hover:underline cursor-pointer">3.ຄວາມຮູ້ພື້ນຖານກ່ຽວກັບວີດີໂອ</li>
-              </ul> -->
-            </div>
+     <Modal/>
 </div>
-</div>
+
     <section id="features" class="py-10 md:py-20 container mx-auto text-center flex flex-col gap-2 px">
       <p class="text-blue-500 font-bold">Features</p>
       <h1 class="text-4xl mb-2">Join the future of dining</h1>

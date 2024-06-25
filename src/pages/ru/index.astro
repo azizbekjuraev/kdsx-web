@@ -3,60 +3,39 @@ import BaseHead from '../../components/BaseHead.astro';
 import Footer from '../../components/ru/Footer.astro';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../../consts';
 import Navbar from '../../components/ru/Navbar.astro'
+import Modal from '../../components/Modal.astro';
 ---
 
 <!doctype html>
 <html lang="en">
 	<head>
 		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
-		<script>
-(function (w, d, s, o: any, f, js, fjs) {
-        w[o] = w[o] || function () {
-            (w[o].q = w[o].q || []).push(arguments) };
-        js = d.createElement(s), fjs = d.getElementsByTagName(s)[0];
-        js.id = o; js.src = f; js.async = 1;
-        fjs.parentNode.insertBefore(js, fjs) }
-    (window, document, 'script', 'nw', 'https://chat.norby.io/widget'));
-        nw('init', {
-            apiKey: 'c3bb2931-e2c5-4393-819d-5eaef668b7ee',
-            serviceBaseUrl: 'https://api.norby.io',
-            lang: 'ru',
-            languageList: ['EN','RU'],
-            mainColor: '#2563eb',
-            popupBotAvatarColor: '#3E247E',
-            multichat: true,
-            botName: 'KDSX Bot',
-            imageTransferEnabled: true,
-            side: 'left',
-            marginSideDesktop: 80,
-            marginBottomDesktop: 48,
-            marginSideMobile: 16,
-            marginBottomMobile: 16
-        });
-		</script>
+    <script src="../../../public/js/index.js"></script>
 	</head>
 <body class="font-sans antialiased">
+  <div id="overlay" class="hidden fixed inset-0 w-full h-full bg-black bg-opacity-50 z-10"></div>
     <div class="custom-bg bg-cover">
      <Navbar/>
     <section id="home" class="py-10 lg:py-20 flex justify-between px">
-  <div class="container mx-auto lg:flex justify-between items-center">
-    <div class="flex gap-4 flex-col xl:w-[60%]">
-      <h1 class="text-5xl md:text-5xl lg:text-7xl md:text-center lg:text-start">Сделайте умный выбор для вашего бизнеса<span class="text-blue-500"> сегодня!</span></h1>
-      <p class="w-auto md:w-96 tracking-wide font-light text-base my-2 md:my-6 md:text-center md:mx-auto lg:text-start lg:mx-0">Оптимизируйте свои операции и увеличьте прибыльность с нашим комплексным POS-решением.</p>
-      <div class="flex gap-4 flex-col-reverse md:flex-row md:justify-center lg:justify-start">
-        <button class="border border-[#D0D5DD] rounded-lg px-11 py-4 font-semibold inline-flex gap-2 bg-blue-600 text-white justify-center md:justify-normal items-center">
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-circle-play">
-            <circle cx="12" cy="12" r="10" />
-            <polygon points="10 8 16 12 10 16 10 8" />
-          </svg>
-          Демонстрация
-        </button>
-      </div>
-    </div>
-    <div class="flex justify-end relative mt-8 w-full">
-      <img src="../../img/pos_img.png" alt="placeholder" />
-    </div>
-  </div>
+        <div class="container mx-auto lg:flex justify-between items-center">
+          <div class="flex gap-4 flex-col xl:w-[60%]">
+            <h1 class="text-5xl md:text-5xl lg:text-7xl md:text-center lg:text-start">Сделайте умный выбор для вашего бизнеса<span class="text-blue-500"> сегодня!</span></h1>
+            <p class="w-auto md:w-96 tracking-wide font-light text-base my-2 md:my-6 md:text-center md:mx-auto lg:text-start lg:mx-0">Оптимизируйте свои операции и увеличьте прибыльность с нашим комплексным POS-решением.</p>
+            <div class="flex gap-4 flex-col-reverse md:flex-row md:justify-center lg:justify-start">
+              <button id="openModalBtn" class="border border-[#D0D5DD] rounded-lg px-11 py-4 font-semibold inline-flex gap-2 bg-blue-600 text-white justify-center md:justify-normal items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-circle-play">
+                  <circle cx="12" cy="12" r="10" />
+                  <polygon points="10 8 16 12 10 16 10 8" />
+                </svg>
+                Демонстрация
+              </button>
+            </div>
+          </div>
+          <div class="flex justify-end relative mt-8 w-full">
+            <img src="../../img/pos_img.png" alt="placeholder" />
+          </div>
+        </div>
+        <Modal/>
     </section>
     </div>
     <section id="features" class="py-10 md:py-20 container mx-auto text-center flex flex-col gap-2 px">
