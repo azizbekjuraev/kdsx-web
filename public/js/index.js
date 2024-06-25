@@ -31,6 +31,7 @@ let openModalBtn = document.getElementById("openModalBtn");
 let openModal = document.getElementById("openModal");
 let overlay = document.getElementById("overlay");
 let closeModalBtn = document.getElementById("closeModalBtn");
+let iFrame = document.getElementById("iFrame");
 
 openModalBtn?.addEventListener("click", () => {
   overlay.style.display = "block";
@@ -40,11 +41,13 @@ openModalBtn?.addEventListener("click", () => {
 closeModalBtn?.addEventListener("click", () => {
   overlay.style.display = "none";
   openModal?.classList.add("hidden");
+  iFrame.src = iFrame.src;
 });
 
 window.addEventListener("click", (event) => {
   if (event.target === overlay) {
     overlay.style.display = "none";
     openModal.classList.add("hidden");
+    iFrame.src = iFrame.src;
   }
 });
