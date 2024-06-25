@@ -2,9 +2,15 @@
 import type { CollectionEntry } from 'astro:content'; import BaseHead from '../components/BaseHead.astro'; import Footer from '../components/en/Footer.astro'; import FormattedDate from '../components/FormattedDate.astro';
 import Navbar from '../components/en/Navbar.astro'
 
+import { getLangFromUrl, useTranslations } from '../i18n/utils';
+
 type Props = CollectionEntry<'blog'>['data'];
 
 const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+console.log(lang)
 ---
 
 <html lang="en">
@@ -50,15 +56,13 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 	</head>
 
     <body>
-	<div class="px">
 	  <Navbar/>
-	</div>
     	<main>
-    		<article>
+    		<article class="mb-8">
     			<div class="prose">
     				<div class="title mt-4 md:mt-8">
     					<div class="date">
-    					Опубликовано <FormattedDate date={pubDate} />
+    					<span class="inline-flex items-center gap-x-1.5 py-1.5 px-3 rounded-full text-xs font-medium bg-blue-100 text-blue-800">{t("published_on")}</span><FormattedDate date={pubDate} />
     						{
     							updatedDate && (
     								<div class="last-updated-on">

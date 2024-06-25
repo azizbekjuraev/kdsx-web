@@ -87,12 +87,10 @@ const posts = (await getCollection('blog')).sort(
 		</style>
 	</head>
 	<body>
-	<div class="px">
 	  <Navbar/>
-		<main>
+		<main class="px">
 			<BlogSections/>
 		</main>
-	</div>
 		<Footer/>
 	</body>
 </html>
