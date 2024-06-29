@@ -5,12 +5,12 @@ services:
     restart: always
     labels:
       - traefik.enable=true
-      - traefik.http.routers.demo-pos.entrypoints=web, websecure
-      - traefik.http.routers.demo-pos.rule=Host(`kdsx.uz`) || Host(`www.kdsx.uz`)
-      - traefik.http.services.demo-pos.loadbalancer.server.port=80
+      - traefik.http.routers.kdsx-web.entrypoints=web, websecure
+      - traefik.http.routers.kdsx-web.rule=Host(`kdsx.uz`) || Host(`www.kdsx.uz`)
+      - traefik.http.services.kdsx-web.loadbalancer.server.port=80
       - traefik.http.middlewares.wwwredirect.redirectregex.regex=^https://www\.(.*)
       - traefik.http.middlewares.wwwredirect.redirectregex.replacement=https://$${1}
-      - traefik.http.routers.demo-pos.middlewares=wwwredirect
+      - traefik.http.routers.kdsx-web.middlewares=wwwredirect
     networks:
       - app
 
