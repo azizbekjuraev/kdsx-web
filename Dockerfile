@@ -2,7 +2,7 @@ FROM node:20-alpine as install-stage
 
 WORKDIR /app
 RUN corepack enable pnpm
-COPY package.json pnpm-lock.yaml .npmrc ./
+COPY package.json pnpm-lock.yaml ./
 RUN pnpm i
 COPY . .
 
