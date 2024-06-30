@@ -1,53 +1,53 @@
 ---
-import Drawer from '../ru/Drawer.astro';
----  
-      <nav class="mt-4 md:mt-0 md:shadow-sm">
-        <div class="container mx-auto flex justify-between items-center px lg:px-0">
-          <ul>
-            <li>
-              <a href="/" class="">
-                <img src="/img/kdsx_logo_3.png" alt="" class="w-28">
-              </a>
-            </li>
-          </ul>
-          <ul class="flex">
-            <li><a href="#home" class="ml-4 hidden md:block text-black text-lg hover:text-blue-500">Главная</a></li>
-            <li><a href="#features" class="ml-4 hidden md:block text-black text-lg hover:text-blue-500">Функции</a></li>
-            <li><a href="#pricing" class="ml-4 hidden md:block text-black text-lg hover:text-blue-500">Цены</a></li>
-            <li><a href="#reviews" class="ml-4 hidden md:block text-black text-lg hover:text-blue-500">Отзывы</a></li>
-            <li><a href="#partners" class="ml-4 hidden md:block text-black text-lg hover:text-blue-500">Партнеры</a></li>
-          </ul>
-          <div class="nav-btns flex gap-3 text-black items-center">
-             <div class="md:flex items-center justify-center hidden">
-            <a class="hover:text-blue-500 size-10 inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent  hover:bg-white/10 disabled:opacity-50 disabled:pointer-events-none focus:outline-none focus:ring-1 focus:ring-gray-600" href="https://t.me/kdsx_pos_uzbekistan">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-navigation"><polygon points="3 11 22 2 13 21 11 13 3 11" /></svg>
-            </a>
-            <a class="hover:text-blue-500 size-10 inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent hover:bg-white/10 disabled:opacity-50 disabled:pointer-events-none focus:outline-none focus:ring-1 focus:ring-gray-600" href="https://www.linkedin.com/company/kdsx-pos/">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-linkedin">
-                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
-                <rect width="4" height="12" x="2" y="9" />
-                <circle cx="4" cy="4" r="2" />
-              </svg>
-            </a>
-            <a class="hover:text-blue-500 size-10 inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent hover:bg-white/10 disabled:opacity-50 disabled:pointer-events-none focus:outline-none focus:ring-1 focus:ring-gray-600" href="https://www.instagram.com/kdsx.uz/">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-instagram">
-                <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
-                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
-                <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
-              </svg>
-            </a>
-            <a class="hover:text-blue-500 size-10 inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent hover:bg-white/10 disabled:opacity-50 disabled:pointer-events-none focus:outline-none focus:ring-1 focus:ring-gray-600" href="https://www.youtube.com/@KDSXPOS-RestoranAvtomatlash">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-youtube">
-                <path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17" />
-                <path d="m10 15 5-3-5-3z" />
-              </svg>
-            </a>
-            <div class="border-l h-14 mx-1 hidden lg:block">
-            </div>
-            <a href="tel:+998941500330" class="ml-2 text-blue-500 text-lg hidden lg:block">+998941500330</a>
-          </div>
-              <Drawer/>
-          </div>
-        </div>
-      </nav>
-      <hr class="w-full hidden md:block">
+import Drawer from './Drawer.astro';
+---
+
+<nav class="mt-4 md:mt-0 md:shadow-sm">
+  <div class="container mx-auto flex justify-between items-center px md:py-5">
+    <ul>
+      <li>
+        <a href="/" class="">
+          <img src="/img/kdsx_logo_3.png" alt="" class="w-28">
+        </a>
+      </li>
+    </ul>
+    <ul class="flex text-[#475467]">
+      <li><a href="#home" class="ml-4 hidden md:block hover:text-blue-600">Главная</a></li>
+      <li><a href="#features" class="ml-4 hidden md:block hover:text-blue-600">Особенности</a></li>
+      <li><a href="#pricing" class="ml-4 hidden md:block hover:text-blue-600">Цены</a></li>
+      <li><a href="#reviews" class="ml-4 hidden md:block hover:text-blue-600">Отзывы</a></li>
+      <li><a href="#partners" class="ml-4 hidden md:block hover:text-blue-600">Партнеры</a></li>
+    </ul>
+    <div class="nav-btns flex gap-3 text-black items-center">
+       <div class="md:flex items-center justify-center hidden">
+      <a class="hover:text-blue-500 size-10 inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent hover:bg-white/10 disabled:opacity-50 disabled:pointer-events-none focus:outline-none focus:ring-1 focus:ring-gray-600" href="https://t.me/kdsx_pos_uzbekistan">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-navigation"><polygon points="3 11 22 2 13 21 11 13 3 11" /></svg>
+      </a>
+      <a class="hover:text-blue-500 size-10 inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent hover:bg-white/10 disabled:opacity-50 disabled:pointer-events-none focus:outline-none focus:ring-1 focus:ring-gray-600" href="https://www.linkedin.com/company/kdsx-pos/">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-linkedin">
+          <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+          <rect width="4" height="12" x="2" y="9" />
+          <circle cx="4" cy="4" r="2" />
+        </svg>
+      </a>
+      <a class="hover:text-blue-500 size-10 inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent hover:bg-white/10 disabled:opacity-50 disabled:pointer-events-none focus:outline-none focus:ring-1 focus:ring-gray-600" href="https://www.instagram.com/kdsx.uz/">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-instagram">
+          <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
+          <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+          <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
+        </svg>
+      </a>
+      <a class="hover:text-blue-500 size-10 inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent hover:bg-white/10 disabled:opacity-50 disabled:pointer-events-none focus:outline-none focus:ring-1 focus:ring-gray-600" href="https://www.youtube.com/@KDSXPOS-RestoranAvtomatlash">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-youtube">
+          <path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17" />
+          <path d="m10 15 5-3-5-3z" />
+        </svg>
+      </a>
+      <div class="border-l h-8 mx-1 hidden lg:block"></div>
+      <a href="tel:+998941500330" class="ml-2 text-blue-600 text-lg hidden lg:block hover:text-blue-700">+998941500330</a>
+    </div>
+      <Drawer/>
+    </div>
+  </div>
+</nav>
+<hr class="w-full hidden md:block">

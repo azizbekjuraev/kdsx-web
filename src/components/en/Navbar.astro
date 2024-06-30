@@ -2,7 +2,7 @@
 import Drawer from './Drawer.astro';
 ---  
       <nav class="mt-4 md:mt-0 md:shadow-sm">
-        <div class="container mx-auto flex justify-between items-center px">
+        <div class="container mx-auto flex justify-between items-center px md:py-5">
           <ul>
             <li>
               <a href="/" class="">
@@ -10,12 +10,12 @@ import Drawer from './Drawer.astro';
               </a>
             </li>
           </ul>
-          <ul class="flex">
-            <li><a href="#home" class="ml-4 hidden md:block text-black text-lg hover:text-blue-500">Home</a></li>
-            <li><a href="#features" class="ml-4 hidden md:block text-black text-lg hover:text-blue-500">Features</a></li>
-            <li><a href="#pricing" class="ml-4 hidden md:block text-black text-lg hover:text-blue-500">Pricing</a></li>
-            <li><a href="#reviews" class="ml-4 hidden md:block text-black text-lg hover:text-blue-500">Reviews</a></li>
-            <li><a href="#partners" class="ml-4 hidden md:block text-black text-lg hover:text-blue-500">Partners</a></li>
+          <ul class="flex text-[#475467]">
+            <li><a href="#home" class="ml-4 hidden md:block hover:text-blue-600">Home</a></li>
+            <li><a href="#features" class="ml-4 hidden md:block hover:text-blue-600">Features</a></li>
+            <li><a href="#pricing" class="ml-4 hidden md:block hover:text-blue-600">Pricing</a></li>
+            <li><a href="#reviews" class="ml-4 hidden md:block hover:text-blue-600">Reviews</a></li>
+            <li><a href="#partners" class="ml-4 hidden md:block hover:text-blue-600">Partners</a></li>
           </ul>
           <div class="nav-btns flex gap-3 text-black items-center">
              <div class="md:flex items-center justify-center hidden">
@@ -42,9 +42,9 @@ import Drawer from './Drawer.astro';
                 <path d="m10 15 5-3-5-3z" />
               </svg>
             </a>
-            <div class="border-l h-14 mx-1 hidden lg:block">
+            <div class="border-l h-8 mx-1 hidden lg:block">
             </div>
-            <a href="tel:+998941500330" class="ml-2 text-blue-500 text-lg hidden lg:block">+998941500330</a>
+            <a href="tel:+998941500330" class="ml-2 text-blue-600 text-lg hidden lg:block hover:text-blue-700">+998941500330</a>
           </div>
               <Drawer/>
           </div>

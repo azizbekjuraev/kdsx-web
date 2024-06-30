@@ -10,19 +10,21 @@ import Modal from '../../components/Modal.astro';
 <html lang="en">
 	<head>
 		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+    <link rel="shortcut icon" type="image/x-icon" href="../../../public/img/favicon-32x32.png">
     <script src="../../../public/js/index.js"></script>
 	</head>
 <body class="font-sans antialiased">
-   <div id="overlay" class="hidden fixed inset-0 w-full h-full bg-black bg-opacity-50 z-10"></div>
+   <div id="overlay" class="hidden fixed inset-0 w-full h-full bg-black bg-opacity-50 z-10">
+   </div>
     <div class="custom-bg bg-cover relative">
      <Navbar/>
       <section id="home" class="py-10 lg:py-20 flex justify-between px">
         <div class="container mx-auto lg:flex justify-between items-center">
           <div class="flex gap-4 flex-col xl:w-[60%]">
             <h1 class="text-5xl md:text-5xl lg:text-7xl md:text-center lg:text-start">Make the smart choice for your business<span class="text-blue-500"> today!</span></h1>
-            <p class="w-auto md:w-96 tracking-wide font-light text-base my-2 md:my-6 md:text-center md:mx-auto lg:text-start lg:mx-0">Optimize your operations and increase your profitability with our comprehensive POS solution.</p>
+            <p class="w-auto md:w-96 tracking-wide font-light text-base my-2 md:my-6 md:text-center md:mx-auto lg:text-start lg:mx-0 text-[#475467]">Optimize your operations and increase your profitability with our comprehensive POS solution.</p>
             <div class="flex gap-4 flex-col-reverse md:flex-row md:justify-center lg:justify-start">
-              <button id="openModalBtn" class="border border-[#D0D5DD] rounded-lg px-11 py-4 font-semibold inline-flex gap-2 bg-blue-600 text-white justify-center md:justify-normal items-center">
+              <button id="openModalBtn" class="border border-[#D0D5DD] rounded-lg px-11 py-4 font-semibold inline-flex gap-2 bg-blue-600 hover:bg-blue-700 text-white justify-center md:justify-normal items-center">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-circle-play">
                   <circle cx="12" cy="12" r="10" />
                   <polygon points="10 8 16 12 10 16 10 8" />
@@ -38,7 +40,6 @@ import Modal from '../../components/Modal.astro';
       </section>
      <Modal/>
 </div>
-
     <section id="features" class="py-10 md:py-20 container mx-auto text-center flex flex-col gap-2 px">
       <p class="text-blue-500 font-bold">Features</p>
       <h1 class="text-4xl mb-2">Join the future of dining</h1>
@@ -50,7 +51,7 @@ import Modal from '../../components/Modal.astro';
             <path d="M7 11v4a2 2 0 0 0 2 2h4" />
             <rect width="8" height="8" x="13" y="13" rx="2" />
           </svg>
-          <p class="font-bold my-2">Streamline Your Operations</p>
+          <span class="font-bold my-2">Streamline Your Operations</span>
           <p class="tracking-wide font-light text-base">With KDSX POS, streamline your orders, payments, and inventory management for a smoother, more efficient workflow.</p>
         </div>
         <div class="flex flex-col items-center">
@@ -59,7 +60,7 @@ import Modal from '../../components/Modal.astro';
             <circle cx="12" cy="10" r="3" />
             <path d="M7 21v-2a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v2" />
           </svg>
-          <p class="font-bold my-2">Enhance Customer Experience</p>
+          <span class="font-bold my-2">Enhance Customer Experience</span>
           <p class="tracking-wide font-light text-base">Boost customer satisfaction with faster service, accurate orders, and multiple payment options using our advanced POS system.</p>
         </div>
         <div class="flex flex-col items-center">
@@ -69,7 +70,7 @@ import Modal from '../../components/Modal.astro';
             <path d="M17 22v-4.172a2 2 0 0 0-.586-1.414L12 12l-4.414 4.414A2 2 0 0 0 7 17.828V22" />
             <path d="M7 2v4.172a2 2 0 0 0 .586 1.414L12 12l4.414-4.414A2 2 0 0 0 17 6.172V2" />
           </svg>
-          <p class="font-bold my-2">Save Time and Reduce Errors</p>
+          <span class="font-bold my-2">Save Time and Reduce Errors</span>
           <p class="tracking-wide font-light text-base">Automate your daily tasks, reduce manual errors, and save valuable time with KDSX POS, so you can focus on what you do best – serving great food.</p>
         </div>
         <div class="flex flex-col items-center">
@@ -77,7 +78,7 @@ import Modal from '../../components/Modal.astro';
             <path d="M5 17H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2h-1" />
             <path d="m12 15 5 6H7Z" />
           </svg>
-          <p class="font-bold my-2">Real-Time Insights</p>
+          <span class="font-bold my-2">Real-Time Insights</span>
           <p class="tracking-wide font-light text-base">Make informed decisions with real-time analytics and detailed reports on sales, inventory, and customer preferences.</p>
         </div>
         <div class="flex flex-col items-center">
@@ -87,7 +88,7 @@ import Modal from '../../components/Modal.astro';
             <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
             <path d="M16 3.13a4 4 0 0 1 0 7.75" />
           </svg>
-          <p class="font-bold my-2">Simplify Employee Management</p>
+          <span class="font-bold my-2">Simplify Employee Management</span>
           <p class="tracking-wide font-light text-base">Easily manage staff schedules, track attendance, and streamline payroll with our integrated employee management features.</p>
         </div>
         <div class="flex flex-col items-center mb-20">
@@ -97,7 +98,7 @@ import Modal from '../../components/Modal.astro';
             <path d="M16 3h5v5" />
             <path d="M21 3 9 15" />
           </svg>
-          <p class="font-bold my-2">Scalable and Adaptable</p>
+          <span class="font-bold my-2">Scalable and Adaptable</span>
           <p class="tracking-wide font-light text-base">Whether you’re a small café or a large restaurant, KDSX POS scales with your business, offering the flexibility and support you need.</p>
         </div>
       </div>
@@ -109,9 +110,9 @@ import Modal from '../../components/Modal.astro';
         <h1 class="text-4xl my-4">Plans that fit your scale</h1>
         <p class="mb-10">Simple, transparent pricing that grows with you. Try any plan free for 14 days.</p>
         <div class="mb-20">
-          <div class="flex flex-col lg:flex-row justify-center gap-x-6 gap-y-6 lg:gap-y-0 flex-wrap">
-            <div class="flex items-center justify-center gap-8">
-              <div class="w-full max-w-sm lg:w-96 border rounded-lg px-6 py-6 shadow-md">
+          <div class="flex flex-col lg:flex-row justify-center gap-x-6 gap-y-6 flex-wrap">
+            <div class="flex justify-center gap-8 items-stretch">
+              <div class="items-stretch w-full max-w-sm lg:w-96 border rounded-lg px-6 py-6 shadow-md">
                 <div class="flex justify-between">
                   <span class="font-semibold">Monthly payment</span>
                 </div>
@@ -121,8 +122,8 @@ import Modal from '../../components/Modal.astro';
                 </div>
                 <p class="text-left my-4 text-gray-600">Server will be provided by the company.</p>
                 <div class="flex flex-col">
-                  <a class="bg-blue-600 text-white py-3 rounded-lg" href="https://t.me/kdsx_pos_uzbekistan">Get started</a>
-                  <a class="border py-3 rounded-lg mt-3" href="https://t.me/kdsx_pos_admin">Chat to sales</a>
+                  <a class="bg-blue-600 hover:bg-blue-700 text-white py-3 rounded-lg" href="https://t.me/kdsx_pos_uzbekistan">Get started</a>
+                  <a class="border py-3 rounded-lg mt-3 hover:text-blue-600" href="https://t.me/kdsx_pos_admin">Chat to sales</a>
                 </div>
                 <div class="relative mt-8">
                   <hr class="absolute left-0 right-0 -mx-5 w-auto" />
@@ -130,7 +131,7 @@ import Modal from '../../components/Modal.astro';
                 <div class="text-left py-6">
                   <span class="font-semibold uppercase">Features</span>
                   <p class="text-gray-600">Everything in <span class="font-semibold">Starter</span> plus....</p>
-                  <div class="flex gap-2 items-center">
+                  <div class="flex gap-2 items-center mt-2">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-circle-check text-blue-600">
                       <circle cx="12" cy="12" r="10" />
                       <path d="m9 12 2 2 4-4" />
@@ -148,7 +149,7 @@ import Modal from '../../components/Modal.astro';
               </div>
             </div>
             <div class="flex items-center justify-center gap-8">
-              <div class="w-full max-w-sm lg:w-96 border rounded-lg px-6 py-6 shadow-md">
+              <div class="items-stretch w-full max-w-sm lg:w-96 border rounded-lg px-6 py-6 shadow-md">
                 <div class="flex justify-between">
                   <span class="font-semibold">Yearly payment</span>
                 </div>
@@ -158,8 +159,8 @@ import Modal from '../../components/Modal.astro';
                 </div>
                 <p class="text-left my-4 text-gray-600">Server will be provided by the company.</p>
                 <div class="flex flex-col">
-                  <a class="bg-blue-600 text-white py-3 rounded-lg" href="https://t.me/kdsx_pos_uzbekistan">Get started</a>
-                  <a class="border py-3 rounded-lg mt-3" href="https://t.me/kdsx_pos_admin">Chat to sales</a>
+                  <a class="bg-blue-600 hover:bg-blue-700 text-white py-3 rounded-lg" href="https://t.me/kdsx_pos_uzbekistan">Get started</a>
+                  <a class="border py-3 rounded-lg mt-3 hover:text-blue-600" href="https://t.me/kdsx_pos_admin">Chat to sales</a>
                 </div>
                 <div class="relative mt-8">
                   <hr class="absolute left-0 right-0 -mx-5 w-auto" />
@@ -192,7 +193,7 @@ import Modal from '../../components/Modal.astro';
               </div>
             </div>
             <div class="flex items-center justify-center gap-8">
-              <div class="w-full max-w-sm lg:w-96 border rounded-lg px-6 py-6 shadow-md">
+              <div class="items-stretch w-full max-w-sm lg:w-96 border rounded-lg px-6 py-6 shadow-md">
                 <div class="flex justify-between">
                   <span class="font-semibold">Lifetime Purchase</span>
                   <span class="border rounded-full px-2 bg-blue-100 text-blue-600 border-blue-400">Premium</span>
@@ -203,8 +204,8 @@ import Modal from '../../components/Modal.astro';
                 </div>
                 <p class="text-left my-4 text-gray-600">Customer needs to buy his or her server.</p>
                 <div class="flex flex-col">
-                  <a class="bg-blue-600 text-white py-3 rounded-lg" href="https://t.me/kdsx_pos_uzbekistan">Get started</a>
-                  <a class="border py-3 rounded-lg mt-3" href="https://t.me/kdsx_pos_admin">Chat to sales</a>
+                  <a class="bg-blue-600 hover:bg-blue-700 text-white py-3 rounded-lg" href="https://t.me/kdsx_pos_uzbekistan">Get started</a>
+                  <a class="border py-3 rounded-lg mt-3 hover:text-blue-600" href="https://t.me/kdsx_pos_admin">Chat to sales</a>
                 </div>
                 <div class="relative mt-8">
                   <hr class="absolute left-0 right-0 -mx-5 w-auto" />
@@ -242,198 +243,201 @@ import Modal from '../../components/Modal.astro';
       </div>
     </section>
     <section id="reviews" class="pt-10 md:pt-20 px">
-      <div class="container mx-auto flex flex-col lg:flex-row justify-between items-start">
+      <div class="container mx-auto">
+        <h1 class="text-4xl font-semibold mb-4">Don’t just take our word for it</h1>
+        <p class="text-gray-600">Hear from some of our amazing customers who are automating their businesses.</p>
+      </div>
+      <div class="container mx-auto flex flex-col lg:flex-row justify-between items-start overflow-hidden">
         <div class="flex flex-col mb-8 lg:mb-0">
-          <h1 class="text-4xl font-semibold mb-4">Don’t just take our word for it</h1>
-          <p class="text-gray-600">Hear from some of our amazing customers who are automating their businesses.</p>
+          <div class="carousel mt-10" id="">
+            <div class="grid grid-flow-col carousel-slides">
+                <div class="carousel-slide w-80 h-[480px] relative">
+                  <img src="../../img/customer_1.jpeg" alt="" class="h-[480px] object-fill" />
+                  <div class="bg-white text-white bg-opacity-80 absolute bottom-0 left-0 right-0 z-20 m-6 p-4 glass-effect">
+                    <div class="flex items-center">
+                      <img src="../../img/star.png" alt="" />
+                      <img src="../../img/star.png" alt="" />
+                      <img src="../../img/star.png" alt="" />
+                      <img src="../../img/star.png" alt="" />
+                      <img src="../../img/star.png" alt="" />
+                    </div>
+                    <h1 class="text-2xl my-4 text-white">Qobiljon Ne'matillayev</h1>
+                    <h6 class="text-lg font-semibold text-white">Asoschi, Takahashi mochi</h6>
+                    <span>Toshkent</span>
+                  </div>
+                </div>
+                <div class="carousel-slide w-80 h-[480px] relative">
+                  <img src="../../img/customer_2.jpeg" alt="" class="h-[480px] object-fill" />
+                  <div class="bg-white text-white bg-opacity-75 absolute bottom-0 left-0 right-0 z-20 m-6 p-4 glass-effect">
+                    <!-- <h1 class="text-xl font-semibold mb-4">“We’ve really sped up our workflow using Untitled.”</h1> -->
+                    <div class="flex">
+                      <img src="../../img/star.png" alt="" />
+                      <img src="../../img/star.png" alt="" />
+                      <img src="../../img/star.png" alt="" />
+                      <img src="../../img/star.png" alt="" />
+                      <img src="../../img/star.png" alt="" />
+                    </div>
+                    <h1 class="text-2xl my-4 text-white">Sohibjon J</h1>
+                    <h6 class="text-lg font-semibold text-white">Buxgalter, Steak House</h6>
+                    <span>Namangan</span>
+                  </div>
+                </div>
+                <div class="carousel-slide w-80 h-[480px] relative">
+                  <img src="../../img/customer_3.jpeg" alt="" class="h-[480px] object-cover" />
+                  <div class="bg-white text-white bg-opacity-75 absolute bottom-0 left-0 right-0 z-20 m-6 p-4 glass-effect">
+                    <div class="flex">
+                      <img src="../../img/star.png" alt="" />
+                      <img src="../../img/star.png" alt="" />
+                      <img src="../../img/star.png" alt="" />
+                      <img src="../../img/star.png" alt="" />
+                      <img src="../../img/star.png" alt="" />
+                    </div>
+                    <h1 class="text-2xl my-4 text-white">Davron Tadjibaev</h1>
+                    <h6 class="text-lg font-semibold text-white">Direktor, Family</h6>
+                    <span>Toshkent</span>
+                  </div>
+                </div>
+                <div class="carousel-slide w-80 h-[480px] relative">
+                  <img src="../../img/customer_4.jpeg" alt="" class="h-[480px] object-cover" />
+                  <div class="bg-white text-white bg-opacity-75 absolute bottom-0 left-0 right-0 z-20 m-6 p-4 glass-effect">
+                    <div class="flex">
+                      <img src="../../img/star.png" alt="" />
+                      <img src="../../img/star.png" alt="" />
+                      <img src="../../img/star.png" alt="" />
+                      <img src="../../img/star.png" alt="" />
+                      <img src="../../img/star.png" alt="" />
+                    </div>
+                    <h1 class="text-2xl my-4 text-white">Bekzod Turgunov</h1>
+                    <h6 class="text-lg font-semibold text-white">Direktor yordamchisi, Evrika</h6>
+                    <span>Namangan</span>
+                  </div>
+                </div>
+                <div class="carousel-slide w-80 h-[480px] relative">
+                  <img src="https://www.jll.ca/images/jll-employees/internet-contacts/11432893.png" alt="" class="h-[480px] object-cover" />
+                  <div class="bg-white text-white bg-opacity-75 absolute bottom-0 left-0 right-0 z-20 m-6 p-4 glass-effect">
+                    <div class="flex">
+                      <img src="../../img/star.png" alt="" />
+                      <img src="../../img/star.png" alt="" />
+                      <img src="../../img/star.png" alt="" />
+                      <img src="../../img/star.png" alt="" />
+                      <img src="../../img/star.png" alt="" />
+                    </div>
+                    <h1 class="text-2xl my-4 text-white">Mashxura K</h1>
+                    <h6 class="text-lg font-semibold text-white">Asoschi, Ayshe Dessert</h6>
+                    <span>Namangan</span>
+                  </div>
+                </div>
+                <div class="carousel-slide w-80 h-[480px] relative">
+                  <img src="https://img.freepik.com/free-photo/handsome-smiling-man-wearing-green-shirt-standing-against-blue-background_662251-587.jpg" alt="" class="h-[480px] object-cover" />
+                  <div class="bg-white text-white bg-opacity-75 absolute bottom-0 left-0 right-0 z-20 m-6 p-4 glass-effect">
+                    <div class="flex">
+                      <img src="../../img/star.png" alt="" />
+                      <img src="../../img/star.png" alt="" />
+                      <img src="../../img/star.png" alt="" />
+                      <img src="../../img/star.png" alt="" />
+                      <img src="../../img/star.png" alt="" />
+                    </div>
+                    <h1 class="text-2xl my-4 text-white">Sardorbek F</h1>
+                    <h6 class="text-lg font-semibold text-white">Boshqaruvchi, N1 Hotdog</h6>
+                    <span>Namangan</span>
+                  </div>
+                </div>
+                <div class="carousel-slide w-80 h-[480px] relative">
+                  <img src="../../img/customer_1.jpeg" alt="" class="h-[480px] object-fill" />
+                  <div class="bg-white text-white bg-opacity-80 absolute bottom-0 left-0 right-0 z-20 m-6 p-4 glass-effect">
+                    <div class="flex items-center">
+                      <img src="../../img/star.png" alt="" />
+                      <img src="../../img/star.png" alt="" />
+                      <img src="../../img/star.png" alt="" />
+                      <img src="../../img/star.png" alt="" />
+                      <img src="../../img/star.png" alt="" />
+                    </div>
+                    <h1 class="text-2xl my-4 text-white">Qobiljon Ne'matillayev</h1>
+                    <h6 class="text-lg font-semibold text-white">Asoschi, Takahashi mochi</h6>
+                    <span>Toshkent</span>
+                  </div>
+                </div>
+                <div class="carousel-slide w-80 h-[480px] relative">
+                  <img src="../../img/customer_2.jpeg" alt="" class="h-[480px] object-fill" />
+                  <div class="bg-white text-white bg-opacity-75 absolute bottom-0 left-0 right-0 z-20 m-6 p-4 glass-effect">
+                    <!-- <h1 class="text-xl font-semibold mb-4">“We’ve really sped up our workflow using Untitled.”</h1> -->
+                    <div class="flex">
+                      <img src="../../img/star.png" alt="" />
+                      <img src="../../img/star.png" alt="" />
+                      <img src="../../img/star.png" alt="" />
+                      <img src="../../img/star.png" alt="" />
+                      <img src="../../img/star.png" alt="" />
+                    </div>
+                    <h1 class="text-2xl my-4 text-white">Sohibjon J</h1>
+                    <h6 class="text-lg font-semibold text-white">Buxgalter, Steak House</h6>
+                    <span>Namangan</span>
+                  </div>
+                </div>
+                <div class="carousel-slide w-80 h-[480px] relative">
+                  <img src="../../img/customer_3.jpeg" alt="" class="h-[480px] object-cover" />
+                  <div class="bg-white text-white bg-opacity-75 absolute bottom-0 left-0 right-0 z-20 m-6 p-4 glass-effect">
+                    <div class="flex">
+                      <img src="../../img/star.png" alt="" />
+                      <img src="../../img/star.png" alt="" />
+                      <img src="../../img/star.png" alt="" />
+                      <img src="../../img/star.png" alt="" />
+                      <img src="../../img/star.png" alt="" />
+                    </div>
+                    <h1 class="text-2xl my-4 text-white">Davron Tadjibaev</h1>
+                    <h6 class="text-lg font-semibold text-white">Direktor, Family</h6>
+                    <span>Toshkent</span>
+                  </div>
+                </div>
+                <div class="carousel-slide w-80 h-[480px] relative">
+                  <img src="../../img/customer_4.jpeg" alt="" class="h-[480px] object-cover" />
+                  <div class="bg-white text-white bg-opacity-75 absolute bottom-0 left-0 right-0 z-20 m-6 p-4 glass-effect">
+                    <div class="flex">
+                      <img src="../../img/star.png" alt="" />
+                      <img src="../../img/star.png" alt="" />
+                      <img src="../../img/star.png" alt="" />
+                      <img src="../../img/star.png" alt="" />
+                      <img src="../../img/star.png" alt="" />
+                    </div>
+                    <h1 class="text-2xl my-4 text-white">Bekzod Turgunov</h1>
+                    <h6 class="text-lg font-semibold text-white">Direktor yordamchisi, Evrika</h6>
+                    <span>Namangan</span>
+                  </div>
+                </div>
+                <div class="carousel-slide w-80 h-[480px] relative">
+                  <img src="https://www.jll.ca/images/jll-employees/internet-contacts/11432893.png" alt="" class="h-[480px] object-cover" />
+                  <div class="bg-white text-white bg-opacity-75 absolute bottom-0 left-0 right-0 z-20 m-6 p-4 glass-effect">
+                    <div class="flex">
+                      <img src="../../img/star.png" alt="" />
+                      <img src="../../img/star.png" alt="" />
+                      <img src="../../img/star.png" alt="" />
+                      <img src="../../img/star.png" alt="" />
+                      <img src="../../img/star.png" alt="" />
+                    </div>
+                    <h1 class="text-2xl my-4 text-white">Mashxura K</h1>
+                    <h6 class="text-lg font-semibold text-white">Asoschi, Ayshe Dessert</h6>
+                    <span>Namangan</span>
+                  </div>
+                </div>
+                <div class="carousel-slide w-80 h-[480px] relative">
+                <img src="https://img.freepik.com/free-photo/handsome-smiling-man-wearing-green-shirt-standing-against-blue-background_662251-587.jpg" alt="" class="h-[480px] object-cover" />
+                <div class="bg-white text-white bg-opacity-75 absolute bottom-0 left-0 right-0 z-20 m-6 p-4 glass-effect">
+                  <div class="flex">
+                    <img src="../../img/star.png" alt="" />
+                    <img src="../../img/star.png" alt="" />
+                    <img src="../../img/star.png" alt="" />
+                    <img src="../../img/star.png" alt="" />
+                    <img src="../../img/star.png" alt="" />
+                  </div>
+                  <h1 class="text-2xl my-4 text-white">Sardorbek F</h1>
+                  <h6 class="text-lg font-semibold text-white">Boshqaruvchi, N1 Hotdog</h6>
+                  <span>Namangan</span>
+                </div>
+             </div>
+            </div>
+          </div>
         </div>
       </div>
-      <div class="container mx-auto carousel mt-10" id="">
-        <div class="grid grid-flow-col carousel-slides">
-          <div class="carousel-slide w-80 h-[480px] relative">
-            <img src="../../img/customer_1.jpeg" alt="" class="h-[480px] object-fill" />
-            <div class="bg-white text-white bg-opacity-80 absolute bottom-0 left-0 right-0 z-20 m-6 p-4 glass-effect">
-              <div class="flex items-center">
-                <img src="../../img/star.png" alt="" />
-                <img src="../../img/star.png" alt="" />
-                <img src="../../img/star.png" alt="" />
-                <img src="../../img/star.png" alt="" />
-                <img src="../../img/star.png" alt="" />
-              </div>
-              <h1 class="text-2xl my-4 text-white">Qobiljon Ne'matillayev</h1>
-              <h6 class="text-lg font-semibold text-white">Asoschi, Takahashi mochi</h6>
-              <p>Toshkent</p>
-            </div>
-          </div>
-          <div class="carousel-slide w-80 h-[480px] relative">
-            <img src="../../img/customer_2.jpeg" alt="" class="h-[480px] object-fill" />
-            <div class="bg-white text-white bg-opacity-75 absolute bottom-0 left-0 right-0 z-20 m-6 p-4 glass-effect">
-              <!-- <h1 class="text-xl font-semibold mb-4">“We’ve really sped up our workflow using Untitled.”</h1> -->
-              <div class="flex">
-                <img src="../../img/star.png" alt="" />
-                <img src="../../img/star.png" alt="" />
-                <img src="../../img/star.png" alt="" />
-                <img src="../../img/star.png" alt="" />
-                <img src="../../img/star.png" alt="" />
-              </div>
-              <h1 class="text-2xl my-4 text-white">Sohibjon J</h1>
-              <h6 class="text-lg font-semibold text-white">Buxgalter, Steak House</h6>
-              <p>Namangan</p>
-            </div>
-          </div>
-          <div class="carousel-slide w-80 h-[480px] relative">
-            <img src="../../img/customer_3.jpeg" alt="" class="h-[480px] object-cover" />
-            <div class="bg-white text-white bg-opacity-75 absolute bottom-0 left-0 right-0 z-20 m-6 p-4 glass-effect">
-              <div class="flex">
-                <img src="../../img/star.png" alt="" />
-                <img src="../../img/star.png" alt="" />
-                <img src="../../img/star.png" alt="" />
-                <img src="../../img/star.png" alt="" />
-                <img src="../../img/star.png" alt="" />
-              </div>
-              <h1 class="text-2xl my-4 text-white">Davron Tadjibaev</h1>
-              <h6 class="text-lg font-semibold text-white">Direktor, Family</h6>
-              <p>Toshkent</p>
-            </div>
-          </div>
-          <div class="carousel-slide w-80 h-[480px] relative">
-            <img src="../../img/customer_4.jpeg" alt="" class="h-[480px] object-cover" />
-            <div class="bg-white text-white bg-opacity-75 absolute bottom-0 left-0 right-0 z-20 m-6 p-4 glass-effect">
-              <div class="flex">
-                <img src="../../img/star.png" alt="" />
-                <img src="../../img/star.png" alt="" />
-                <img src="../../img/star.png" alt="" />
-                <img src="../../img/star.png" alt="" />
-                <img src="../../img/star.png" alt="" />
-              </div>
-              <h1 class="text-2xl my-4 text-white">Bekzod Turgunov</h1>
-              <h6 class="text-lg font-semibold text-white">Direktor yordamchisi, Evrika</h6>
-              <p>Namangan</p>
-            </div>
-          </div>
-          <div class="carousel-slide w-80 h-[480px] relative">
-            <img src="https://www.jll.ca/images/jll-employees/internet-contacts/11432893.png" alt="" class="h-[480px] object-cover" />
-            <div class="bg-white text-white bg-opacity-75 absolute bottom-0 left-0 right-0 z-20 m-6 p-4 glass-effect">
-              <div class="flex">
-                <img src="../../img/star.png" alt="" />
-                <img src="../../img/star.png" alt="" />
-                <img src="../../img/star.png" alt="" />
-                <img src="../../img/star.png" alt="" />
-                <img src="../../img/star.png" alt="" />
-              </div>
-              <h1 class="text-2xl my-4 text-white">Mashxura K</h1>
-              <h6 class="text-lg font-semibold text-white">Asoschi, Ayshe Dessert</h6>
-              <p>Namangan</p>
-            </div>
-          </div>
-          <div class="carousel-slide w-80 h-[480px] relative">
-            <img src="https://img.freepik.com/free-photo/handsome-smiling-man-wearing-green-shirt-standing-against-blue-background_662251-587.jpg" alt="" class="h-[480px] object-cover" />
-            <div class="bg-white text-white bg-opacity-75 absolute bottom-0 left-0 right-0 z-20 m-6 p-4 glass-effect">
-              <div class="flex">
-                <img src="../../img/star.png" alt="" />
-                <img src="../../img/star.png" alt="" />
-                <img src="../../img/star.png" alt="" />
-                <img src="../../img/star.png" alt="" />
-                <img src="../../img/star.png" alt="" />
-              </div>
-              <h1 class="text-2xl my-4 text-white">Sardorbek F</h1>
-              <h6 class="text-lg font-semibold text-white">Boshqaruvchi, N1 Hotdog</h6>
-              <p>Namangan</p>
-            </div>
-          </div>
-              <div class="carousel-slide w-80 h-[480px] relative">
-            <img src="../../img/customer_1.jpeg" alt="" class="h-[480px] object-fill" />
-            <div class="bg-white text-white bg-opacity-80 absolute bottom-0 left-0 right-0 z-20 m-6 p-4 glass-effect">
-              <div class="flex items-center">
-                <img src="../../img/star.png" alt="" />
-                <img src="../../img/star.png" alt="" />
-                <img src="../../img/star.png" alt="" />
-                <img src="../../img/star.png" alt="" />
-                <img src="../../img/star.png" alt="" />
-              </div>
-              <h1 class="text-2xl my-4 text-white">Qobiljon Ne'matillayev</h1>
-              <h6 class="text-lg font-semibold text-white">Asoschi, Takahashi mochi</h6>
-              <p>Toshkent</p>
-            </div>
-          </div>
-          <div class="carousel-slide w-80 h-[480px] relative">
-            <img src="../../img/customer_2.jpeg" alt="" class="h-[480px] object-fill" />
-            <div class="bg-white text-white bg-opacity-75 absolute bottom-0 left-0 right-0 z-20 m-6 p-4 glass-effect">
-              <!-- <h1 class="text-xl font-semibold mb-4">“We’ve really sped up our workflow using Untitled.”</h1> -->
-              <div class="flex">
-                <img src="../../img/star.png" alt="" />
-                <img src="../../img/star.png" alt="" />
-                <img src="../../img/star.png" alt="" />
-                <img src="../../img/star.png" alt="" />
-                <img src="../../img/star.png" alt="" />
-              </div>
-              <h1 class="text-2xl my-4 text-white">Sohibjon J</h1>
-              <h6 class="text-lg font-semibold text-white">Buxgalter, Steak House</h6>
-              <p>Namangan</p>
-            </div>
-          </div>
-          <div class="carousel-slide w-80 h-[480px] relative">
-            <img src="../../img/customer_3.jpeg" alt="" class="h-[480px] object-cover" />
-            <div class="bg-white text-white bg-opacity-75 absolute bottom-0 left-0 right-0 z-20 m-6 p-4 glass-effect">
-              <div class="flex">
-                <img src="../../img/star.png" alt="" />
-                <img src="../../img/star.png" alt="" />
-                <img src="../../img/star.png" alt="" />
-                <img src="../../img/star.png" alt="" />
-                <img src="../../img/star.png" alt="" />
-              </div>
-              <h1 class="text-2xl my-4 text-white">Davron Tadjibaev</h1>
-              <h6 class="text-lg font-semibold text-white">Direktor, Family</h6>
-              <p>Toshkent</p>
-            </div>
-          </div>
-          <div class="carousel-slide w-80 h-[480px] relative">
-            <img src="../../img/customer_4.jpeg" alt="" class="h-[480px] object-cover" />
-            <div class="bg-white text-white bg-opacity-75 absolute bottom-0 left-0 right-0 z-20 m-6 p-4 glass-effect">
-              <div class="flex">
-                <img src="../../img/star.png" alt="" />
-                <img src="../../img/star.png" alt="" />
-                <img src="../../img/star.png" alt="" />
-                <img src="../../img/star.png" alt="" />
-                <img src="../../img/star.png" alt="" />
-              </div>
-              <h1 class="text-2xl my-4 text-white">Bekzod Turgunov</h1>
-              <h6 class="text-lg font-semibold text-white">Direktor yordamchisi, Evrika</h6>
-              <p>Namangan</p>
-            </div>
-          </div>
-          <div class="carousel-slide w-80 h-[480px] relative">
-            <img src="https://www.jll.ca/images/jll-employees/internet-contacts/11432893.png" alt="" class="h-[480px] object-cover" />
-            <div class="bg-white text-white bg-opacity-75 absolute bottom-0 left-0 right-0 z-20 m-6 p-4 glass-effect">
-              <div class="flex">
-                <img src="../../img/star.png" alt="" />
-                <img src="../../img/star.png" alt="" />
-                <img src="../../img/star.png" alt="" />
-                <img src="../../img/star.png" alt="" />
-                <img src="../../img/star.png" alt="" />
-              </div>
-              <h1 class="text-2xl my-4 text-white">Mashxura K</h1>
-              <h6 class="text-lg font-semibold text-white">Asoschi, Ayshe Dessert</h6>
-              <p>Namangan</p>
-            </div>
-          </div>
-          <div class="carousel-slide w-80 h-[480px] relative">
-            <img src="https://img.freepik.com/free-photo/handsome-smiling-man-wearing-green-shirt-standing-against-blue-background_662251-587.jpg" alt="" class="h-[480px] object-cover" />
-            <div class="bg-white text-white bg-opacity-75 absolute bottom-0 left-0 right-0 z-20 m-6 p-4 glass-effect">
-              <div class="flex">
-                <img src="../../img/star.png" alt="" />
-                <img src="../../img/star.png" alt="" />
-                <img src="../../img/star.png" alt="" />
-                <img src="../../img/star.png" alt="" />
-                <img src="../../img/star.png" alt="" />
-              </div>
-              <h1 class="text-2xl my-4 text-white">Sardorbek F</h1>
-              <h6 class="text-lg font-semibold text-white">Boshqaruvchi, N1 Hotdog</h6>
-              <p>Namangan</p>
-            </div>
-          </div>
-        </div>
-      </div>
+     
       <!-- <div class="container mx-auto flex gap-8 mt-4">
         <button class="border rounded-full p-4" id="prevBtn">
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-left text-[#667085]"><path d="m15 18-6-6 6-6" /></svg>
@@ -495,7 +499,7 @@ import Modal from '../../components/Modal.astro';
               <span class="text-gray-600">Access to all features</span>
             </div>
             <div class="flex gap-2 mt-10 w-full flex-col-reverse md:flex-row">
-              <a class="border px-6 py-3 rounded-lg text-white bg-blue-600 text-center" href="https://t.me/kdsx_pos_admin">Learn more</a>
+              <a class="border px-6 py-3 rounded-lg text-white bg-blue-600 hover:bg-blue-700 text-center" href="https://t.me/kdsx_pos_admin">Learn more</a>
             </div>
           </div>
           <img src="../../img/dash_img.png" alt="" class="border-4 rounded-lg border-black w-full md:w-[60%] mt-8" />

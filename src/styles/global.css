@@ -75,7 +75,7 @@ a {
   color: var(--accent);
 } */
 p {
-  margin-bottom: 1em;
+  color: #475467;
 }
 .prose p {
   margin-bottom: 2em;
@@ -136,7 +136,7 @@ hr {
 }
 
 /* .custom-bg {
-  background-image: url("./images/background_pattern.svg");
+  background-image: url("../../public/img/background_pattern.svg");
 } */
 html {
   scroll-behavior: smooth;
@@ -153,7 +153,7 @@ html {
   list-style: none;
   gap: 50px;
   flex-shrink: 1;
-  animation: scroll 25s linear infinite;
+  animation: scroll 100s linear infinite;
 }
 
 .carousel-slide {
@@ -177,7 +177,7 @@ html {
 }
 
 .glass-effect {
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: #ffffff4d;
   backdrop-filter: blur(10px);
 }
 .slider {
@@ -253,7 +253,7 @@ main {
     animation: scrollToRight 15s linear infinite;
   }
   .carousel-slides {
-    animation: scroll 10s linear infinite;
+    animation: scroll 55s linear infinite;
   }
   .px {
     padding-left: 1rem;
