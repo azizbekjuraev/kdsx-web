@@ -7,8 +7,9 @@ services:
       - traefik.enable=true
       - traefik.http.routers.kdsx-web.entrypoints=web, websecure
       - traefik.http.routers.kdsx-web.rule=Host(`kdsx.uz`) || Host(`www.kdsx.uz`)
-      - traefik.http.services.kdsx-web.loadbalancer.server.url=https://kdsx.vercel.app
-      - traefik.http.services.kdsx-web.loadbalancer.passhostheader=true
+      - traefik.http.routers.kdsx-web.service=kdsx-vercel
+      - traefik.http.services.kdsx-vercel.loadbalancer.server.url=https://kdsx.vercel.app
+      - traefik.http.services.kdsx-vercel.loadbalancer.passhostheader=true
     networks:
       - app
 
